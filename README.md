@@ -73,3 +73,14 @@
     </td>
   </tr>
 </table>
+
+<h3 align="left">LeetCode Journey</h3>
+
+<p align="center">
+  <img
+    src="https://leetcard.jacoblin.cool/Pramjeet_kumar7?ext=heatmap&theme=dark&border=0&radius=8"
+    alt="LeetCode journey"
+    width="100%"
+    style="max-height: 280px; object-fit: contain;"
+  />
+</p>
