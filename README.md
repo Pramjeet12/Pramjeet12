@@ -55,14 +55,14 @@
 
 <table width="100%">
   <tr>
-    <td width="50%" align="center">
-      <img
-        src="https://github-readme-stats.vercel.app/api/top-langs?username=pramjeet12&show_icons=true&locale=en&layout=compact&hide_border=true&card_width=420&bg_color=111827&title_color=67E8F9&text_color=E5E7EB"
-        alt="Most used languages"
-        width="100%"
-        height="220"
-      />
-    </td>
+ <td width="50%" align="center">
+  <img
+    src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=pramjeet12&show_icons=true&locale=en&layout=compact&hide_border=true&card_width=420&bg_color=111827&title_color=67E8F9&text_color=E5E7EB"
+    alt="Most used languages"
+    width="100%"
+    height="220"
+  />
+</td>
     <td width="50%" align="center">
       <img
         src="https://github-readme-activity-graph.vercel.app/graph?username=pramjeet12&hide_border=true&area=true&radius=8&height=455&custom_title=Contribution%20Graph&bg_color=111827&color=E5E7EB&title_color=67E8F9&line=22D3EE&point=A5F3FC&area_color=0F766E"
