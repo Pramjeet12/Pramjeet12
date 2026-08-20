@@ -1,0 +1,25 @@
+name: Generate GitHub Activity Graph
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # runs daily at midnight UTC
+  workflow_dispatch:        # lets you trigger it manually too
+
+jobs:
+  generate-graph:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate activity graph
+        uses: Ashutosh00710/github-readme-activity-graph@v2.0.7
+        with:
+          username: Pramjeet12
+          theme: react-dark
+          output: github-contribution-grid-graph.svg
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-contribution-grid-graph.svg
+          git commit -m "Update activity graph" || echo "No changes to commit"
+          git push
