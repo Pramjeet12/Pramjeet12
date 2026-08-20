@@ -51,6 +51,16 @@
   <a href="https://www.linux.org/" target="blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="40" width="40" /></a>
 </p>
 
+<h3 align="left">Engineering Journey</h3>
+
+<p align="center">
+  <img
+    src="assets/engineering-journey.png"
+    alt="AI Engineer at Zycus career status"
+    width="100%"
+  />
+</p>
+
 <h3 align="left">GitHub Journey</h3>
 
 <table width="100%">
