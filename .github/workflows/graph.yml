@@ -1,25 +1,28 @@
-name: Generate GitHub Activity Graph
+name: Generate GitHub Snake Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs daily at midnight UTC
-  workflow_dispatch:        # lets you trigger it manually too
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
-  generate-graph:
+  generate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Generate activity graph
-        uses: Ashutosh00710/github-readme-activity-graph@v2.0.7
+      - name: Generate snake graph
+        uses: Platane/snk@v3
         with:
-          username: Pramjeet12
-          theme: react-dark
-          output: github-contribution-grid-graph.svg
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Commit and push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add github-contribution-grid-graph.svg
-          git commit -m "Update activity graph" || echo "No changes to commit"
-          git push
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
